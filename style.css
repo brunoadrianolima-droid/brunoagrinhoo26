@@ -1,0 +1,176 @@
+/* Definição das Cores e Variáveis Globais */
+:root {
+    --verde-vivo: #00cc66;
+    --verde-escuro: #004d26;
+    --laranja-sol: #ff9900;
+    --terra: #663300;
+    --fundo-claro: #f4fbf7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-claro);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-vivo));
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    border-bottom: 8px solid var(--laranja-sol);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e6fff2;
+}
+
+/* Container Principal */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Secção Sobre */
+.sobre {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    border-left: 5px solid var(--verde-vivo);
+}
+
+.sobre h2 {
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+}
+
+/* Galeria de Imagens */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.card-img {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border: 2px solid var(--verde-vivo);
+    transition: transform 0.3s ease;
+}
+
+.card-img:hover {
+    transform: translateY(-5px);
+}
+
+.card-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-img p {
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--verde-escuro);
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Bloco de Curiosidades */
+.curiosidades-container {
+    background: linear-gradient(135deg, #e6ffec, #fff5e6);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 3px dashed var(--laranja-sol);
+}
+
+.curiosidades-container h2 {
+    color: var(--terra);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.instrucao {
+    text-align: center; 
+    margin-bottom: 1.5rem; 
+    color: #555;
+    font-weight: 500;
+}
+
+.curiosidade-item {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+/* Botões Interativos */
+.btn-curiosidade {
+    width: 100%;
+    background: var(--verde-vivo);
+    color: white;
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-curiosidade:hover {
+    background: var(--verde-escuro);
+}
+
+/* Conteúdo Escondido */
+.conteudo-curiosidade {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #fff;
+    padding: 0 1.2rem;
+}
+
+.conteudo-curiosidade p {
+    padding: 1.2rem 0;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    border-top: 5px solid var(--laranja-sol);
+}
